@@ -29,4 +29,21 @@ class RektangelTest {
         assertEquals(rektangel.height, height);
         assertEquals(rektangel.width, width);
     }
+
+    @Test
+    void rektangelArea() {
+        assertEquals(new Rektangel(8, 8).getArea(), 64);
+        assertEquals(new Rektangel(10, 6).getArea(), 60);
+        assertEquals(new Rektangel(8, 3).getArea(), 24);
+        assertEquals(new Rektangel(15, 5).getArea(), 75);
+    }
+
+    @Test
+    void rektangelSquare() {
+        assertTrue(new Rektangel(10, 10).isSquare());
+        assertTrue(new Rektangel(5, 5).isSquare());
+
+        assertFalse(new Rektangel(10, 5).isSquare());
+        assertFalse(new Rektangel(8, 3).isSquare());
+    }
 }
